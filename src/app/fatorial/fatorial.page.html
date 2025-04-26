@@ -1,0 +1,30 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Fatorial</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-card>
+    <ion-card-header>Fatorial:</ion-card-header>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-content>
+      <form [formGroup]="meuFormulario">
+        <ion-item>
+          <ion-icon name="calculator-outline" slot="start" />
+          <ion-input type="number" placeholder="Digite o valor que deseja calcular o fatorial"
+            formControlName="numero" />
+        </ion-item>
+        <ion-button [disabled]="!meuFormulario.valid" (click)="onSubmit()" expand="block"
+          type="submit">Calcular</ion-button>
+      </form>
+      <br>
+      <b>Fatorial: {{fatorial}}</b>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

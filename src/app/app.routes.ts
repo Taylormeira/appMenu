@@ -11,4 +11,12 @@ export const routes: Routes = [
     loadComponent: () =>
       import('./folder/folder.page').then((m) => m.FolderPage),
   },
+  {
+    path: 'velocidamedia',
+    loadComponent: () => import('./velocidamedia/velocidamedia.page').then( m => m.VelocidamediaPage)
+  },
+  {
+    path: 'fatorial',
+    loadComponent: () => import('./fatorial/fatorial.page').then( m => m.FatorialPage)
+  },
 ];
